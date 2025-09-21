@@ -13,7 +13,6 @@ terraform {
     bucket       = "hackathon-backend-2025"
     key          = "statefile/terraform.tfstate"
     region       = "us-east-1"
-    use_lockfile = true
   }
 }
 
