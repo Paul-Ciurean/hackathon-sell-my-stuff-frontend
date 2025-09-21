@@ -60,7 +60,7 @@ function App() {
             </svg>
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            Sell My Stuff
+            Sell Paul's Stuff
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 opacity-95">Transform Your Items Into Sales</h2>
           <p className="max-w-3xl mx-auto text-xl opacity-90 mb-8 leading-relaxed">
