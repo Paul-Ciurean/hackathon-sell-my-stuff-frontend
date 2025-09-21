@@ -20,7 +20,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@main # Or a specific version
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          
+          aws-region: "us-east-1"
+
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
         with: 
