@@ -16,11 +16,15 @@ jobs:
         working-directory: terraform
 
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@main # Or a specific version
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
         with: 
           terraform_version: "1.13"
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
       
       - name: Init
         run: terraform init
