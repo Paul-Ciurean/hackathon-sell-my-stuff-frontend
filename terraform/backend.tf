@@ -1,10 +1,8 @@
 terraform {
-  required_version = ">= 1.0"
-
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = ">= 5.72"
+      source = "hashicorp/aws"
+      version = "6.14.0"
     }
   }
 
@@ -13,6 +11,7 @@ terraform {
     bucket       = "hackathon-backend-2025"
     key          = "statefile/terraform.tfstate"
     region       = "us-east-1"
+    use_lockfile = true
   }
 }
 
