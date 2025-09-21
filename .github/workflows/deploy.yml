@@ -10,7 +10,7 @@ permissions:
 
 jobs: 
   terraform: 
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
