@@ -1,0 +1,25 @@
+name: deploy things
+
+on: 
+  push:
+    branches: 
+      - main
+
+permissions: 
+  id-token: write 
+
+jobs: 
+  terraform: 
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: "1.1.7"
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+      
+      - name: Init
+      - run: terraform Init
+
+      - name: Apply
+      - run: terraform apply -auto-approve
