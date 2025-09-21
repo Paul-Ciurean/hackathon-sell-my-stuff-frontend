@@ -19,7 +19,7 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
       
       - name: Init
-      - run: terraform Init
+        run: terraform Init
 
       - name: Apply
-      - run: terraform apply -auto-approve
+        run: terraform apply -auto-approve
